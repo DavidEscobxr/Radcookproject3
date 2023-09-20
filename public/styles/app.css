@@ -1,0 +1,12 @@
+body {
+    background-image: url('../images/fondo.jpg'); /* Usamos '../' para subir un nivel y luego acceder a la carpeta 'images' */
+    background-size: cover;
+
+}
+    /* En tu hoja de estilo CSS */
+.logo {
+    width: 95px; /* Ancho deseado */
+    height: 40px; /* Altura deseada */
+}
+
+
