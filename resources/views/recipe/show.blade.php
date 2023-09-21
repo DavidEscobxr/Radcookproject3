@@ -37,8 +37,8 @@
                             {{ $recipe->user_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Image Id:</strong>
-                            {{ $recipe->image_id }}
+                            <strong>Image</strong>
+                            <img src="{{ asset($recipe->image) }}" alt="">
                         </div>
 
                     </div>

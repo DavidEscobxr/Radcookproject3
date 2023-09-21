@@ -8,14 +8,35 @@
         </div>
         <div class="form-group">
             {{ Form::label('category') }}
-            {{ Form::text('category', $recipe->category, ['class' => 'form-control' . ($errors->has('category') ? ' is-invalid' : ''), 'placeholder' => 'Category']) }}
+            {{ Form::select('category',  ["Postres" => "Postres",
+            "Entradas" => "Entradas",
+            "Desayunos" => "Desayunos",
+            "Almuerzos" => "Almuerzos",
+            "Cenas" => "Cenas",
+            "Ensaladas" => "Ensaladas",
+            "Sopas" => "Sopas",
+            "Platos_vegetarianos" => "Platos Vegetarianos",
+            "Platos_veganos" => "Platos Veganos",
+            "Platos_de_pescado" => "Platos de Pescado",
+            "Platos_de_pollo" => "Platos de Pollo",
+            "Platos_de_carne" => "Platos de Carne",
+            "Guarniciones" => "Guarniciones",
+            "Bebidas" => "Bebidas",
+            "Aperitivos" => "Aperitivos"], $recipe->category, ['class' => 'form-control' . ($errors->has('category') ? ' is-invalid' : ''), 'placeholder' => 'Selecciona la categoría']) }}
             {!! $errors->first('category', '<div class="invalid-feedback">:message</div>') !!}
+
         </div>
 
         <div class="form-group">
             {{ Form::label('description') }}
             {{ Form::text('description', $recipe->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Description']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+
+        <div class="form-group">
+            {{ Form::label('Image') }}
+            {{ Form::file('photo'), ['class' => 'form-control' . ($errors->has('image') ? ' is-invalid' : ''), 'placeholder' => 'Description']}}
+            {!! $errors->first('image', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <br>
         @foreach($map as $type => $ingredients)

@@ -8,10 +8,16 @@ body {
     width: 95px; /* Ancho deseado */
     height: 40px; /* Altura deseada */
 }
-
-.receta{
-    width: 200px; /* Ancho deseado */
-    height: 155px;
+.receta {
+    width: 224px; /* Ancho deseado */
+    height: 170px;
+    display: block;
+    margin: 0 auto;
 }
+.bg-custom-color {
+    background-color: #F6FFF7  /* Reemplaza #FF0000 con el color que desees */
+}
+
+
 
 
